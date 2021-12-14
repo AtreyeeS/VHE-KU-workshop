@@ -13,7 +13,7 @@ The University of Kashmir is organising a 3-day workshop from 1-3 Feb, 2022. The
 - Nukri Komin
 - Giada Peron
 - Cosimo Negro
-
+- 
 
 ## List of topics:
 
@@ -46,5 +46,9 @@ All timings are given in IST (GMT +5:30)
 - extragalactic science at TeV (TBD)
 
 ## Connection details:
+
+The meeting will be held on zoom. 
+Link:
+Password will be sent to the registered participants
 
 
