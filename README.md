@@ -1,54 +1,36 @@
-# VHE Data Analysis Using Open Source Packages
+# Gammapy tutorials for VHE Data Analysis Using Open Source Packages
 
-The University of Kashmir is organising a 3-day workshop from 1-3 Feb, 2022. The aim of this workshop is to prepare the Indian Scientific communtity for VHE data analysis. 
+## Installation and set-up 
 
-## Organising committee
+We reccomend that you install gammapy via conda
 
-- Naseer Iqbal (converner)
-- Sunder Sahayanathan
-- 
+- $ curl -O https://gammapy.org/download/install/gammapy-0.19-environment.yml
+- $ conda env create -f gammapy-0.19-environment.yml
+- $ conda activate gammapy-0.19
 
-## Preliminary Speaker list:
+To download the tutorials and associated datasets (necessary for the tutorials in this workshop)
 
-- Nukri Komin
-- Giada Peron
-- Cosimo Negro
-- 
+- $ gammapy download tutorials
+- $ cd gammapy-tutorials 
+- $ export GAMMAPY_DATA=$PWD/datasets
 
-## List of topics:
+To check if everything is working fine, open a new terminal and type
 
-- Radiation mechanism at VHE
-- Galactic VHE emission
-- TeV sources in the LMC
-- Cosmic ray studies using gamma rays
-- Blazar modelling with agnpy
-- VHE data analysis with gammapy
+- $ conda activate gammapy-0.19
+- ipython
 
-## Registration details
+In the ipython window, type
+- from gammapy.data import DataStore
+- ds = DataStore.from_dir("$GAMMAPY_DATA/hess-dl3-dr1")
+- obs = ds.get_observations()
+- print(len(obs))
 
-We plan to host around xx candidates. Please sign up on this link before 20/01/2022
+If the cells run without any error and prints `105`, **Congratulations! You have correctly set-up gammapy**
 
-
-## Tentative schedule
-
-All timings are given in IST (GMT +5:30)
-
-### Feb 1, 2022: 14:00 - 18:00
-
-- Talks on galactic VHE sources (TBD)
-
-### Feb 2, 2022: 14:00 - 18:00
-
-- data reduction and analysis with gammapy
-
-### Feb 3, 2022: 14:00 - 18:00
-
-- extragalactic science at TeV (TBD)
-
-## Connection details:
-
-The meeting will be held on zoom. 
-Link:
-Password will be sent to the registered participants
-
-
+## Tutorials to be shown
+- loading observations and IRFs
+- Data reduction and fitting of MSH 15-52 (a full analysis)
+- Simulation of PKS 2155-304 with CTA IRFs
+- Fitting of simulated PKS 2155-304: detection significance, detection of cutoff
+- Fitting of simulated PKS 2155-304: joint Fermi-LAT and CTA fitting
+- Light curves.
