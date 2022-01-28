@@ -10,14 +10,14 @@ We reccomend that you install gammapy via conda
 
 To download the tutorials and associated datasets (necessary for the tutorials in this workshop)
 
-- $ gammapy download tutorials
-- $ cd gammapy-tutorials 
+- $ gammapy download notebooks --release 0.19
+- $ gammapy download datasets
 - $ export GAMMAPY_DATA=$PWD/datasets
 
 To check if everything is working fine, open a new terminal and type
 
 - $ conda activate gammapy-0.19
-- ipython
+- $ ipython
 
 In the ipython window, type
 - from gammapy.data import DataStore
