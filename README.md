@@ -12,7 +12,7 @@ To download the tutorials and associated datasets (necessary for the tutorials i
 
 - $ gammapy download notebooks --release 0.19
 - $ gammapy download datasets
-- $ export GAMMAPY_DATA=$PWD/datasets
+- export GAMMAPY_DATA=$PWD/gammapy-datasets
 
 To check if everything is working fine, open a new terminal and type
 
